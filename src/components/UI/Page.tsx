@@ -3,5 +3,5 @@ type PageProps = {
 };
 
 export default function Page({ children }: PageProps) {
-    return <div className="flex min-h-screen pt-20">{children}</div>;
+    return <div className="flex min-h-screen">{children}</div>;
 }
