@@ -11,7 +11,7 @@ export default function Header({ children }: HeaderProps) {
 
     return (
         <div
-            className="sticky top-0 z-50 h-25"
+            className="fixed top-0 left-0 w-full z-50"
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
         >
