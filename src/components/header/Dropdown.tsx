@@ -3,7 +3,7 @@ type LinksType = {
     href: string;
 };
 
-const links: LinksType[] = [
+export const links: LinksType[] = [
     { name: "Hero", href: "#hero" },
     { name: "App1", href: "#app1" },
     { name: "App2", href: "#app2" },
