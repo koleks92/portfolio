@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 :root {
-
     --mono: "JetBrains Mono", monospace;
+}
 
-
+html {
+    scroll-behavior: smooth;
 }
 
 
