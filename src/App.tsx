@@ -1,8 +1,6 @@
-import Gallery from "./components/gallery/Gallery";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 
-import ImageTemp from "./assets/images/apps/temp.png";
 import { links } from "./components/header/Dropdown";
 import AppSection from "./components/appSection/AppSection";
 import { useState } from "react";
@@ -28,18 +26,6 @@ function App() {
                     <div id={getId("Hero")}>
                         <Hero />
                     </div>
-                    <div className="absolute -translate-y-1/2 w-full">
-                        <Gallery
-                            images={[
-                                { name: "temp 1", url: ImageTemp },
-                                { name: "temp 2", url: ImageTemp },
-                                { name: "temp 3", url: ImageTemp },
-                                { name: "temp 4", url: ImageTemp },
-                                { name: "temp 5", url: ImageTemp },
-                            ]}
-                        />
-                    </div>
-                    .
                     <div id={getId("App1")}>
                         <AppSection color="light">App1</AppSection>
                     </div>
