@@ -1,19 +1,61 @@
+import Gallery from "./components/gallery/Gallery";
 import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
+
+import ImageTemp from "./assets/images/apps/temp.png";
+import { links } from "./components/header/Dropdown";
+import AppSection from "./components/appSection/AppSection";
+import { useState } from "react";
+import IntroAnimation from "./components/UI/IntroAnimation";
+
+// Get id from links in Dropdown.tsx
+const getId = (name: string) =>
+    links.find((l) => l.name === name)?.href.replace("#", "");
 
 function App() {
+    const [split, setSplit] = useState(false);
+
     return (
-        <div className="min-h-screen flex flex-col">
-            <Header>Jan Sebastian Konieczek</Header>
-            <main className="flex-1">
-                <section id="hero">Hero</section>
-                <section id="gallery">Gallery</section>
-                <section id="app1">App 1</section>
-                <section id="app2">App 2</section>
-                <section id="app3">App 3</section>
-                <section id="app4">App 4</section>
-                <section id="footer">Footer</section>
-            </main>
-        </div>
+        <>
+            <IntroAnimation split={split} onComplete={() => setSplit(true)} />
+            <div
+                className={`min-h-screen flex flex-col transition-opacity duration-700 ${
+                    split ? "opacity-100" : "opacity-0"
+                }`}
+            >
+                <Header>Jan Sebastian Konieczek</Header>
+                <main className="flex-1">
+                    <div id={getId("Hero")}>
+                        <Hero />
+                    </div>
+                    <div className="absolute -translate-y-1/2 w-full">
+                        <Gallery
+                            images={[
+                                { name: "temp 1", url: ImageTemp },
+                                { name: "temp 2", url: ImageTemp },
+                                { name: "temp 3", url: ImageTemp },
+                                { name: "temp 4", url: ImageTemp },
+                                { name: "temp 5", url: ImageTemp },
+                            ]}
+                        />
+                    </div>
+                    .
+                    <div id={getId("App1")}>
+                        <AppSection color="light">App1</AppSection>
+                    </div>
+                    <div id={getId("App2")}>
+                        <AppSection color="dark">App2</AppSection>
+                    </div>
+                    <div id={getId("App3")}>
+                        <AppSection color="light">App3</AppSection>
+                    </div>
+                    <div id={getId("App4")}>
+                        <AppSection color="dark">App4</AppSection>
+                    </div>
+                    <section id="footer">Footer</section>
+                </main>
+            </div>
+        </>
     );
 }
 
