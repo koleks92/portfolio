@@ -42,7 +42,7 @@ export default function Gallery({ images }: GalleryProps) {
     const iconSize: number = 44; 
 
     return (
-        <div className="w-full overflow-hidden flex flex-col gap-6 py-4">
+        <div className="w-full overflow-hidden flex flex-col gap-6 py-4 fade-edges">
             {/* First Row (Left to Right) */}
             <InfiniteSlider
                 gap={gap}

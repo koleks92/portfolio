@@ -40,3 +40,8 @@ html {
     --color-accent-light: #c4b5fd;
     --color-accent-dark: #7c3aed;
 }
+
+.fade-edges {
+    mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
+}
