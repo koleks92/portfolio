@@ -1,9 +1,9 @@
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
-
+import AOS from "aos";
 import { links } from "./components/header/Dropdown";
 import AppSection from "./components/appSection/AppSection";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IntroAnimation from "./components/UI/IntroAnimation";
 
 // Get id from links in Dropdown.tsx
@@ -12,6 +12,10 @@ const getId = (name: string) =>
 
 function App() {
     const [split, setSplit] = useState(false);
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     return (
         <>
