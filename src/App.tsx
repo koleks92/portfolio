@@ -5,6 +5,7 @@ import { links } from "./components/header/Dropdown";
 import AppSection from "./components/appSection/AppSection";
 import { useEffect, useState } from "react";
 import IntroAnimation from "./components/UI/IntroAnimation";
+import "./styles/aos.css"
 
 // Get id from links in Dropdown.tsx
 const getId = (name: string) =>
@@ -14,8 +15,10 @@ function App() {
     const [split, setSplit] = useState(false);
 
     useEffect(() => {
-        AOS.init();
-    }, []);
+        AOS.init({
+            duration: 800,   // animation duration in ms
+        });
+    }, [split]);
 
     return (
         <>
