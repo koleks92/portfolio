@@ -1,28 +1,55 @@
-import Page from "../UI/Page";
 import type { AppData } from "../../data/apps";
 
 type AppProps = {
     data: AppData;
 };
-
 export default function AppSection({ data }: AppProps) {
     return (
-        <Page>
-            <div
-                className={`flex flex-1 flex-col justify-center items-center ${data.color === "dark" ? "bg-dark-mid text-text-muted" : "bg-light text-text-on-light"}`}
-            >
-                <div className="flex flex-1 border justify-center items-center">
-                    <h2 data-aos="zoom-in">{data.title}</h2>
+        <div
+            className={`flex h-screen flex-col justify-center overflow-hidden ${
+                data.color === "dark"
+                    ? "bg-dark-mid text-text-muted"
+                    : "bg-light text-text-on-light"
+            }`}
+        >
+            {/* Title */}
+            <div className="flex flex-[1] min-h-0 justify-center items-center">
+                <h2 data-aos="zoom-in">{data.title}</h2>
+            </div>
+
+            {/* Row 1 */}
+            <div className="flex flex-[3] min-h-0 flex-row pl-30 pr-10 justify-evenly items-center">
+                <div className="flex-1 min-w-0" data-aos="fade-right">
+                    {data.description1}
                 </div>
-                <div className="flex flex-2 w-full flex-row pl-20 pr-10 border justify-evenly items-center">
-                    <div data-aos="fade-right">Description</div>
-                    <div data-aos="fade-left">Image</div>
-                </div>
-                <div className="flex flex-2 w-full flex-row pl-10 pr-20 border justify-evenly items-center">
-                    <div data-aos="fade-right">Image</div>
-                    <div data-aos="fade-left">Description</div>
+                <div
+                    className="flex-1 min-w-0 h-full min-h-0 overflow-hidden"
+                    data-aos="fade-left"
+                >
+                    <img
+                        src={data.image1}
+                        alt={data.title}
+                        className="w-full h-full object-contain"
+                    />
                 </div>
             </div>
-        </Page>
+
+            {/* Row 2 */}
+            <div className="flex flex-[3] min-h-0 w-full flex-row pl-10 pr-30 justify-evenly items-center">
+                <div
+                    className="flex-1 min-w-0 h-full min-h-0 overflow-hidden"
+                    data-aos="fade-right"
+                >
+                    <img
+                        src={data.image1}
+                        alt={data.title}
+                        className="w-full h-full object-contain"
+                    />
+                </div>
+                <div className="flex-1 min-w-0" data-aos="fade-left">
+                    {data.description2}
+                </div>
+            </div>
+        </div>
     );
 }
