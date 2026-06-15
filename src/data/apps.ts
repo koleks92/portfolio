@@ -1,3 +1,5 @@
+import temp from "../assets/images/apps/temp.png"
+
 export type AppData = {
     id: string;
     title: string;
@@ -14,8 +16,8 @@ export const apps: AppData[] = [
         title: "App 1",
         description1: "Some description about app 1",
         description2: "Some description about app 2",
-        image1: "../assets/images/apps/temp.png",
-        image2: "../assets/images/apps/temp.png",
+        image1: temp,
+        image2: temp,
         color: "light",
     },
     {
@@ -23,8 +25,8 @@ export const apps: AppData[] = [
         title: "App 2",
         description1: "Some description about app 1",
         description2: "Some description about app 2",
-        image1: "../assets/images/apps/temp.png",
-        image2: "../assets/images/apps/temp.png",
+        image1: temp,
+        image2: temp,
         color: "dark",
     },
     {
@@ -32,8 +34,8 @@ export const apps: AppData[] = [
         title: "App 3",
         description1: "Some description about app 1",
         description2: "Some description about app 2",
-        image1: "../assets/images/apps/temp.png",
-        image2: "../assets/images/apps/temp.png",
+        image1: temp,
+        image2: temp,
         color: "light",
     },
     {
@@ -41,8 +43,8 @@ export const apps: AppData[] = [
         title: "App 4",
         description1: "Some description about app 1",
         description2: "Some description about app 2",
-        image1: "../assets/images/apps/temp.png",
-        image2: "../assets/images/apps/temp.png",
+        image1: temp,
+        image2: temp,
         color: "dark",
     },
     {
@@ -50,8 +52,8 @@ export const apps: AppData[] = [
         title: "App 5",
         description1: "Some description about app 1",
         description2: "Some description about app 2",
-        image1: "../assets/images/apps/temp.png",
-        image2: "../assets/images/apps/temp.png",
+        image1: temp,
+        image2: temp,
         color: "light",
     },
 ]
