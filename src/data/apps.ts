@@ -1,4 +1,4 @@
-type AppData = {
+export type AppData = {
     id: string;
     title: string;
     description1: string;
