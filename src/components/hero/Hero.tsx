@@ -1,5 +1,4 @@
 import Gallery from "../gallery/Gallery";
-import Page from "../UI/Page";
 
 import {
     AndroidOriginal,
@@ -83,24 +82,21 @@ export default function Hero() {
     }));
 
     return (
-        <Page>
-            <div className="flex min-h-screen w-full flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
-                <div />
-                <div>
-                    <div className="text-xl font-medium">Foto</div>
-                    <span className="text-lg tracking-wide text-text-primary">
-                        Web & Mobile Developer
-                    </span>
-                </div>
-                <div className="w-full flex flex-col items-center">
-                    <h2 className="text-2xl font-bold text-center mt-6 mb-4 text-text-primary ">
-                        Technologies & Tools
-                    </h2>
-                    <div className="w-full overflow-hidden">
-                        <Gallery images={galleryImages} />
-                    </div>
+        <div className="flex h-screen w-full flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
+            <div>
+                <div className="text-xl font-medium">Foto</div>
+                <span className="text-lg tracking-wide text-text-primary">
+                    Web & Mobile Developer
+                </span>
+            </div>
+            <div className="w-full flex flex-col items-center">
+                <h2 className="text-2xl font-bold text-center mt-6 mb-4 text-text-primary ">
+                    Technologies & Tools
+                </h2>
+                <div className="w-full overflow-hidden">
+                    <Gallery images={galleryImages} />
                 </div>
             </div>
-        </Page>
+        </div>
     );
 }
