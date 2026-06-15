@@ -1,22 +1,18 @@
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import AOS from "aos";
-import { links } from "./components/header/Dropdown";
 import AppSection from "./components/appSection/AppSection";
 import { useEffect, useState } from "react";
 import IntroAnimation from "./components/UI/IntroAnimation";
-import "./styles/aos.css"
-
-// Get id from links in Dropdown.tsx
-const getId = (name: string) =>
-    links.find((l) => l.name === name)?.href.replace("#", "");
+import "./styles/aos.css";
+import { apps } from "./data/apps";
 
 function App() {
     const [split, setSplit] = useState(false);
 
     useEffect(() => {
         AOS.init({
-            duration: 800,   // animation duration in ms
+            duration: 800, // animation duration in ms
         });
     }, [split]);
 
@@ -30,21 +26,16 @@ function App() {
             >
                 <Header>Jan Sebastian Konieczek</Header>
                 <main className="flex-1">
-                    <div id={getId("Hero")}>
+                    <div id="hero">
                         <Hero />
                     </div>
-                    <div id={getId("App1")}>
-                        <AppSection color="light">App1</AppSection>
-                    </div>
-                    <div id={getId("App2")}>
-                        <AppSection color="dark">App2</AppSection>
-                    </div>
-                    <div id={getId("App3")}>
-                        <AppSection color="light">App3</AppSection>
-                    </div>
-                    <div id={getId("App4")}>
-                        <AppSection color="dark">App4</AppSection>
-                    </div>
+                    {apps.map((app) => (
+                        <div key={app.id} id={app.id}>
+                            <AppSection color={app.color}>
+                                {app.title}
+                            </AppSection>
+                        </div>
+                    ))}
                     <section id="footer">Footer</section>
                 </main>
             </div>
