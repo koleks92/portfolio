@@ -31,9 +31,7 @@ function App() {
                     </div>
                     {apps.map((app) => (
                         <div key={app.id} id={app.id}>
-                            <AppSection color={app.color}>
-                                {app.title}
-                            </AppSection>
+                            <AppSection data={app} />
                         </div>
                     ))}
                     <section id="footer">Footer</section>
