@@ -34,6 +34,8 @@ import {
     Css3Original,
 } from "devicons-react";
 
+import Typewriter from "typewriter-effect";
+
 // Define the type for our tech stack array
 type TechItem = {
     name: string;
@@ -83,11 +85,22 @@ export default function Hero() {
 
     return (
         <div className="flex h-screen w-full flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
-            <div>
+            <div className="flex flex-col justify-center items-center w-100">
                 <div className="text-xl font-medium">Foto</div>
-                <span className="text-lg tracking-wide text-text-primary">
-                    Web & Mobile Developer
-                </span>
+                    <span className="text-2xl tracking-wide text-text-primary text-center">
+                        <Typewriter
+                            options={{
+                                strings: [
+                                    "Web Developer",
+                                    "Mobile Developer",
+                                    "Home Automation Enthusiast",
+                                    "Python Tinkerer",
+                                ],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    </span>
             </div>
             <div className="w-full flex flex-col items-center">
                 <h2 className="text-2xl font-bold text-center mt-6 mb-4 text-text-primary ">
