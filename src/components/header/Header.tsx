@@ -15,7 +15,10 @@ export default function Header({ children }: HeaderProps) {
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
         >
-            <div id="header" className="bg-dark p-2 text-center">
+            <div
+                id="header"
+                className="flex items-center justify-center bg-dark p-2 h-15"
+            >
                 <h2 className="text-text-primary">{children}</h2>
             </div>
             <div

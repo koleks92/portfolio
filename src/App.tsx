@@ -24,13 +24,13 @@ function App() {
                     split ? "opacity-100" : "opacity-0"
                 }`}
             >
-                <Header>Jan Sebastian Konieczek</Header>
+                    <Header>Jan Sebastian Konieczek</Header>
                 <main className="flex-1">
-                    <div id="hero">
+                    <div id="hero" className="scroll-mt-15">
                         <Hero />
                     </div>
                     {apps.map((app) => (
-                        <div key={app.id} id={app.id}>
+                        <div key={app.id} id={app.id} className="scroll-mt-15">
                             <AppSection data={app} />
                         </div>
                     ))}
