@@ -19,7 +19,14 @@ export default function AppSection({ data }: AppProps) {
 
             {/* Row 1 */}
             <div className="flex flex-[3] min-h-0 flex-row pl-30 pr-10 justify-evenly items-center">
-                <div className="flex-1 min-w-0" data-aos="fade-right">
+                <div
+                    className={`flex-1 min-w-0 p-5 m-5 rounded-lg ${
+                        data.color === "dark"
+                            ? "bg-light text-text-on-light"
+                            : "bg-dark-mid text-text-muted"
+                    }`}
+                    data-aos="fade-right"
+                >
                     {data.description1}
                 </div>
                 <div
@@ -46,7 +53,14 @@ export default function AppSection({ data }: AppProps) {
                         className="w-full h-full object-contain"
                     />
                 </div>
-                <div className="flex-1 min-w-0" data-aos="fade-left">
+                <div
+                    className={`flex-1 min-w-0 p-5 rounded-xl ${
+                        data.color === "dark"
+                            ? "bg-light text-text-on-light"
+                            : "bg-dark-mid text-text-muted"
+                    }`}
+                    data-aos="fade-left"
+                >
                     {data.description2}
                 </div>
             </div>
