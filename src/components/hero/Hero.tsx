@@ -34,6 +34,8 @@ import {
     Css3Original,
 } from "devicons-react";
 
+import picture from "../../assets/images/me/me2.png";
+
 import Typewriter from "typewriter-effect";
 
 // Define the type for our tech stack array
@@ -86,7 +88,7 @@ export default function Hero() {
     return (
         <div className="flex h-screen w-full flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
             <div className="flex flex-col justify-center items-center w-100">
-                <div className="text-xl font-medium">Foto</div>
+                <img src={picture} className="w-50 m-10 rounded-full" />
                 <span className="text-2xl tracking-wide text-text-primary text-center">
                     <Typewriter
                         options={{
