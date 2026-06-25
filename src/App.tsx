@@ -30,7 +30,7 @@ function App() {
                         <Hero />
                     </div>
                     {apps.map((app) => (
-                        <div key={app.id} id={app.id} className="scroll-mt-15">
+                        <div key={app.id} id={app.id} className={`scroll-mt-15 w-full ${app.color === "dark" ? "bg-dark-mid" : "bg-light"}`}>
                             <AppSection data={app} />
                         </div>
                     ))}
