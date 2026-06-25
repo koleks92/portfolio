@@ -33,7 +33,7 @@ export const apps: AppData[] = [
         title: "DishDate",
         url: "https://github.com/koleks92/DishDate",
         description1: "DishDate is a fun, interactive app where two users go through a set of dish cards, swiping left or right based on their preferences. The app then shows how many dishes they both liked, helping people bond over shared tastes in food.",
-        description2: "Built with secure Google and Apple OAuth for seamless user onboarding, the app pairs a dynamic card-swiping engine with asynchronous Push Notifications to alert users the moment a match is found. To optimize performance, the system uses relational database queries to instantly calculate shared food preferences, delivering instant match results while maintaining low query latency.",
+        description2: "Built with secure Google and Apple OAuth for seamless user onboarding, the app pairs a dynamic card-swiping engine with asynchronous Push Notifications to alert users the moment a game is finished. To optimize performance, the system uses relational database queries to instantly calculate shared food preferences, delivering instant match results while maintaining low query latency.",
         image1: dishdate1,
         image2: dishdate2,
         color: "dark",
