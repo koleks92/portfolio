@@ -48,7 +48,7 @@ export default function AppSection({ data }: AppProps) {
                     data-aos="fade-right"
                 >
                     <img
-                        src={data.image1}
+                        src={data.image2}
                         alt={data.title}
                         className="w-full h-full object-contain"
                     />
