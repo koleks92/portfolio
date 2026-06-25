@@ -29,7 +29,7 @@ export default function AppSection({ data }: AppProps) {
                         }`}
                         data-aos="fade-right"
                     >
-                        {data.description1}
+                        <span className="text-lg">{data.description1}</span>
                     </div>
                     <div
                         className="flex-1 min-w-0 h-full min-h-0 overflow-hidden"
@@ -63,7 +63,7 @@ export default function AppSection({ data }: AppProps) {
                         }`}
                         data-aos="fade-left"
                     >
-                        {data.description2}
+                        <span className="text-lg">{data.description2}</span>
                     </div>
                 </div>
             </div>
