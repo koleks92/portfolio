@@ -34,7 +34,7 @@ import {
     Css3Original,
 } from "devicons-react";
 
-import picture from "../../assets/images/me/me2.png";
+import picture from "../../assets/images/me/me3.png";
 
 import Typewriter from "typewriter-effect";
 
