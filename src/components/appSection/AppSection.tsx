@@ -4,6 +4,7 @@ import Page from "../UI/Page";
 type AppProps = {
     data: AppData;
 };
+
 export default function AppSection({ data }: AppProps) {
     return (
         <Page>
