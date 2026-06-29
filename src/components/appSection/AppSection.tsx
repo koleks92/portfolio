@@ -39,7 +39,7 @@ export default function AppSection({ data }: AppProps) {
                         <img
                             src={data.image1}
                             alt={data.title}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain scale-95 hover:scale-100 transition-transform duration-300"
                         />
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export default function AppSection({ data }: AppProps) {
                         <img
                             src={data.image2}
                             alt={data.title}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain scale-95 hover:scale-100 transition-transform duration-300"
                         />
                     </div>
                     <div
