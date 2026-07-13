@@ -1,4 +1,3 @@
-import temp from "../assets/images/apps/temp.png";
 import avocadoro1 from "../assets/images/apps/avocadoro/avocadoro1.png"
 import avocadoro2 from "../assets/images/apps/avocadoro/avocadoro2.png"
 import dishdate1 from "../assets/images/apps/dishdate/dishdate1.png"
