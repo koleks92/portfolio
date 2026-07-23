@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: "https://portfolio-backend-production-7fbc.up.railway.app",
   headers: { "Content-Type": "application/json" },
 });
@@ -23,7 +23,7 @@ export async function login(email: string, password: string) {
     const { token } = response.data;
 
     localStorage.setItem("token", token);
-    
+
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
