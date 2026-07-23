@@ -73,8 +73,8 @@ export default function Dashboard() {
                   <td className="px-4 py-2">{app.url}</td>
                   <td className="px-4 py-2">{app.description1}</td>
                   <td className="px-4 py-2">{app.description2}</td>
-                  <td className="px-4 py-2">{app.image1}</td>
-                  <td className="px-4 py-2">{app.image2}</td>
+                  <td className="px-4 py-2"><img src={app.image1} className="w-25 object-cover rounded"/></td>
+                  <td className="px-4 py-2"><img src={app.image2} className="w-25 object-cover rounded"/></td>
                 </tr>
               ))
             )}
