@@ -1,17 +1,42 @@
 import { useState } from "react";
 import { api } from "../auth/auth";
 
-export default function AddApp() {
-  const [title, setTitle] = useState<string>("");
-  const [url, setUrl] = useState<string>("");
-  const [description1, setDescription1] = useState<string>("");
-  const [description2, setDescription2] = useState<string>("");
+type AddAppProps = {
+  title?: string;
+  url?: string;
+  description1?: string;
+  description2?: string;
+  image1?: string;
+  image2?: string;
+};
+
+export default function AddApp({
+  title: initialTitle = "",
+  url: initialUrl = "",
+  description1: initialDescription1 = "",
+  description2: initialDescription2 = "",
+  image1: existingImage1,
+  image2: existingImage2,
+}: AddAppProps) {
+  const [title, setTitle] = useState(initialTitle);
+  const [url, setUrl] = useState(initialUrl);
+  const [description1, setDescription1] = useState(initialDescription1);
+  const [description2, setDescription2] = useState(initialDescription2);
   const [image1, setImage1] = useState<File | null>(null);
   const [image2, setImage2] = useState<File | null>(null);
   const [message, setMessage] = useState<string>("");
 
+  console.log(existingImage1, existingImage2)
+
   const handleSubmit = async (): Promise<void> => {
-    if (!title || !url || !description1 || !description2 || !image1 || !image2) {
+    if (
+      !title ||
+      !url ||
+      !description1 ||
+      !description2 ||
+      !image1 ||
+      !image2
+    ) {
       setMessage("Missing data");
     } else {
       setMessage("");
