@@ -88,7 +88,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="fixed inset-0 z-10">
+      <div className="fixed inset-0 z-0">
         <LightRays
           raysOrigin="top-left"
           raysColor="#ffffff"
