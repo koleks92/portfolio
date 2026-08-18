@@ -20,7 +20,7 @@ function Home() {
     <>
       <IntroAnimation split={split} onComplete={() => setSplit(true)} />
       <div
-        className={`min-h-screen max-w-7xl flex flex-col mx-auto transition-opacity duration-700 ${
+        className={`min-h-screen flex flex-col transition-opacity duration-700 ${
           split ? "opacity-100" : "opacity-0"
         }`}
       >

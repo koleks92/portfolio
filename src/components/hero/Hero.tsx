@@ -88,7 +88,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="flex h-screen w-full flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
+      <div className="flex h-screen max-w-7xl mx-auto flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <LightRays
             raysOrigin="top-left"
@@ -107,7 +107,7 @@ export default function Hero() {
           />
         </div>
         <div className="flex flex-col justify-center items-center w-100">
-          <img src={picture} className="w-75 m-10 rounded-full" />
+          <img src={picture} className="w-70 m-10 rounded-full" />
           <span className="text-2xl tracking-wide text-text-primary text-center">
             <Typewriter
               options={{
