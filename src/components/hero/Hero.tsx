@@ -88,26 +88,26 @@ export default function Hero() {
 
   return (
     <>
-      <div className="fixed inset-0 z-0">
-        <LightRays
-          raysOrigin="top-left"
-          raysColor="#ffffff"
-          raysSpeed={1}
-          lightSpread={0.5}
-          rayLength={3}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0}
-          distortion={0}
-          className="custom-rays"
-          pulsating={false}
-          fadeDistance={1}
-          saturation={1}
-        />
-      </div>
       <div className="flex h-screen w-full flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <LightRays
+            raysOrigin="top-left"
+            raysColor="#ffffff"
+            raysSpeed={1}
+            lightSpread={0.5}
+            rayLength={3}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0}
+            distortion={0}
+            className="custom-rays"
+            pulsating={false}
+            fadeDistance={1}
+            saturation={1}
+          />
+        </div>
         <div className="flex flex-col justify-center items-center w-100">
-          <img src={picture} className="w-50 m-10 rounded-full" />
+          <img src={picture} className="w-75 m-10 rounded-full" />
           <span className="text-2xl tracking-wide text-text-primary text-center">
             <Typewriter
               options={{
