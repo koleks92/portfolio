@@ -24,7 +24,9 @@ function Home() {
           split ? "opacity-100" : "opacity-0"
         }`}
       >
-        <Header>Jan Sebastian Konieczek</Header>
+        <nav>
+          <Header>Jan Sebastian Konieczek</Header>
+        </nav>
         <main className="flex-1">
           <div id="hero" className="scroll-mt-15">
             <Hero />

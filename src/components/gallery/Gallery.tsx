@@ -39,7 +39,7 @@ export default function Gallery({ images }: GalleryProps) {
 
     const speed: number = 12;
     const gap: number = 32;
-    const iconSize: number = 44; 
+    const iconSize: number = 55; 
 
     return (
         <div className="w-full overflow-hidden flex flex-col gap-6 py-4 fade-edges">

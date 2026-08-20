@@ -107,7 +107,7 @@ export default function Hero() {
           />
         </div>
         <div className="flex flex-col justify-center items-center w-100">
-          <img src={picture} className="w-70 m-10 rounded-full" />
+          <img src={picture} className="w-80 m-10 rounded-full" />
           <span className="text-2xl tracking-wide text-text-primary text-center">
             <Typewriter
               options={{
@@ -124,7 +124,7 @@ export default function Hero() {
           </span>
         </div>
         <div className="w-full flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-center mt-6 mb-4 text-text-primary ">
+          <h2 className="text-3xl font-bold text-center mt-6 mb-6 text-text-primary ">
             Technologies & Tools
           </h2>
           <div className="w-full overflow-hidden">
