@@ -2,6 +2,7 @@ import picture from "../../assets/images/me/me3.png";
 
 import Typewriter from "typewriter-effect";
 import LightRays from "../UI/Rays";
+import GalleryHero from "../gallery/GalleryHero";
 
 export default function Hero() {
   return (
@@ -23,22 +24,27 @@ export default function Hero() {
           saturation={1}
         />
       </div>
-      <div className="flex flex-col justify-center items-center w-100">
-        <img src={picture} className="w-80 m-10 rounded-full" />
-        <span className="text-2xl tracking-wide text-text-primary text-center">
-          <Typewriter
-            options={{
-              strings: [
-                "Web Developer",
-                "Mobile Developer",
-                "Home Automation Enthusiast",
-                "Python Tinkerer",
-              ],
-              autoStart: true,
-              loop: true,
-            }}
-          /> 
-        </span>
+      <div className="flex flex-row justify-center items-center w-full h-1/2 z-2">
+        <div className="flex flex-col justify-center items-center w-1/2">
+          <img src={picture} className="w-80 m-10 rounded-full" />
+          <span className="text-2xl tracking-wide text-text-primary text-center">
+            <Typewriter
+              options={{
+                strings: [
+                  "Web Developer",
+                  "Mobile Developer",
+                  "Home Automation Enthusiast",
+                  "Python Tinkerer",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center w-1/2 h-full">
+          <GalleryHero />
+        </div>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <svg
