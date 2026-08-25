@@ -1,0 +1,16 @@
+.imageCustom {
+  position: absolute;
+  object-fit: contain;
+  transition: opacity 1s ease-in-out;
+  width: auto;
+  height: 100%;
+}
+
+.visible {
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+
+.notVisible {
+  opacity: 0;
+}
