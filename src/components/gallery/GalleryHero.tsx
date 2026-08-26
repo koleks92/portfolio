@@ -3,6 +3,11 @@ import "../../styles/gallery.css";
 import avocadoro from "../../assets/images/apps/avocadoro/avocadoro1.png";
 import dishdate from "../../assets/images/apps/dishdate/dishdate_wide.png";
 import beatit from "../../assets/images/apps/beatit/beatit_wide.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 type App = {
   name: string;
@@ -53,20 +58,22 @@ export default function GalleryHero() {
     <div className="flex flex-col w-full h-full justify-center items-center z-2">
       <div className="flex justify-center items-center relative w-full h-full">
         {apps.map((item, index) => (
-          <img
-            src={item.src}
-            alt={item.name}
-            key={index}
-            className={`imageCustom ${index === visibleIndex ? "visible" : "notVisible"}`}
-          />
+          <>
+            <img
+              src={item.src}
+              alt={item.name}
+              key={index}
+              className={`imageCustom ${index === visibleIndex ? "visible" : "notVisible"}`}
+            />
+          </>
         ))}
       </div>
       <div className="flex w-full flex-1 justify-around">
         <button onClick={() => previousIndex()} className="mx-4 text-3xl ">
-          &lt;
+          <FontAwesomeIcon icon={faChevronLeft} />{" "}
         </button>
         <button onClick={() => nextIndex()} className="mx-4 text-3xl ">
-          &gt;
+          <FontAwesomeIcon icon={faChevronRight} />{" "}
         </button>
       </div>
     </div>
