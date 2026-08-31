@@ -1,0 +1,66 @@
+.cloud {
+  position: relative;
+  width: 30vh;
+  height: 10vh;
+  background: #eceff1;
+  box-shadow: 0.8vh 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8vh;
+  z-index: 3;
+}
+
+.cloud::after,
+.cloud::before {
+  content: "";
+  position: inherit;
+  display: inline-block;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.cloud::after {
+  width: 8.5vh;
+  height: 8.5vh;
+  top: -9vh;
+  left: -10vh;
+}
+
+.cloud::before {
+  width: 15vh;
+  height: 15vh;
+  top: -6vh;
+  left: 11vh;
+}
+
+#yellow {
+  position: relative;
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  background-color: rgb(255, 225, 0);
+  left: 15vh;
+  transition: top 2s ease-in-out;
+  z-index: 1;
+}
+
+.hide {
+  top: 6vh;
+}
+
+.show {
+  top: 13vh;
+  animation-name: pulse;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgb(255, 225, 0);
+  }
+  50% {
+    background-color: rgb(255, 187, 0);
+  }
+  100% {
+    background-color: rgb(255, 225, 0);
+  }
+}
