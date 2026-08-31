@@ -72,7 +72,7 @@ export default function GalleryHero() {
   };
 
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center z-2 rounded-2xl bg-dark p-6">
+    <div className="flex flex-col w-full h-full justify-center items-center z-2 rounded-[4rem] bg-dark p-6">
       <div className="flex justify-center items-center my-2 relative w-full h-full">
         {apps.map((item, index) => (
           <>
@@ -103,7 +103,7 @@ export default function GalleryHero() {
         ))}
       </div>
 
-      <div className="flex w-full flex-1 justify-between">
+      <div className="flex w-full flex-1 justify-around mb-4">
         <button onClick={() => previousIndex()} className="mx-4 text-3xl ">
           <FontAwesomeIcon icon={faChevronLeft} />{" "}
         </button>

@@ -1,6 +1,6 @@
 .imageCustom {
   position: absolute;
-  top: 0%;
+  top: -10px;
   object-fit: contain;
   transition: opacity 1s ease-in-out;
   max-height: 100%;
