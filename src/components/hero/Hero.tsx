@@ -24,7 +24,7 @@ export default function Hero() {
           saturation={1}
         />
       </div>
-      <div className="flex flex-row justify-center items-center w-full h-1/2 z-2">
+      <div className="flex flex-row justify-center items-center w-full h-full z-2">
         <div className="flex flex-col justify-center items-center w-1/2">
           <img src={picture} className="w-80 m-10 rounded-full" />
           <span className="text-2xl tracking-wide text-text-primary text-center">
@@ -42,7 +42,7 @@ export default function Hero() {
             />
           </span>
         </div>
-        <div className="flex flex-col justify-center items-center w-1/2 h-full">
+        <div className="flex flex-col justify-center items-center w-1/2 h-3/4">
           <GalleryHero />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../styles/gallery.css";
-import avocadoro from "../../assets/images/apps/avocadoro/avocadoro1.png";
+import avocadoro from "../../assets/images/apps/avocadoro/avocadoro2_wide.png";
 import dishdate from "../../assets/images/apps/dishdate/dishdate_wide.png";
 import beatit from "../../assets/images/apps/beatit/beatit_wide.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,9 +9,14 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+type Description = {
+  textOne: string;
+  textTwo: string;
+};
+
 type App = {
   name: string;
-  description: string;
+  description: Description[];
   src: string;
 };
 
@@ -31,17 +36,29 @@ export default function GalleryHero() {
   const apps: App[] = [
     {
       name: "Avocadoro",
-      description: "Avocadoro App",
+      description: [
+        { textOne: "React + Electron", textTwo: "desktop app" },
+        { textOne: "React Native + TypeScript", textTwo: "mobile app" },
+        { textOne: "Supabase", textTwo: "user data & progress sync" },
+      ],
       src: avocadoro,
     },
     {
       name: "DishDate",
-      description: "DishDate App",
+      description: [
+        { textOne: "React + Electron", textTwo: "desktop app" },
+        { textOne: "React Native + TypeScript", textTwo: "mobile app" },
+        { textOne: "Supabase", textTwo: "user data & progress sync" },
+      ],
       src: dishdate,
     },
     {
       name: "BeatIt",
-      description: "BeatIt App",
+      description: [
+        { textOne: "React + Electron", textTwo: "desktop app" },
+        { textOne: "React Native + TypeScript", textTwo: "mobile app" },
+        { textOne: "Supabase", textTwo: "user data & progress sync" },
+      ],
       src: beatit,
     },
   ];
@@ -55,8 +72,8 @@ export default function GalleryHero() {
   };
 
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center z-2">
-      <div className="flex justify-center items-center relative w-full h-full">
+    <div className="flex flex-col w-full h-full justify-center items-center z-2 rounded-2xl bg-dark p-6">
+      <div className="flex justify-center items-center my-2 relative w-full h-full">
         {apps.map((item, index) => (
           <>
             <img
@@ -65,10 +82,28 @@ export default function GalleryHero() {
               key={index}
               className={`imageCustom ${index === visibleIndex ? "visible" : "notVisible"}`}
             />
+            <div
+              className={`textCustom ${index === visibleIndex ? "visible" : "notVisible"}`}
+            >
+              <h3 className="text-center my-2">{item.name}</h3>
+
+              {item.description.map((desc, descIndex) => {
+                return (
+                  <div
+                    className="flex flex-col text-center text-xl py-1"
+                    key={descIndex}
+                  >
+                    <span className="font-bold">{desc.textOne}</span>
+                    <span>{desc.textTwo}</span>
+                  </div>
+                );
+              })}
+            </div>
           </>
         ))}
       </div>
-      <div className="flex w-full flex-1 justify-around">
+
+      <div className="flex w-full flex-1 justify-between">
         <button onClick={() => previousIndex()} className="mx-4 text-3xl ">
           <FontAwesomeIcon icon={faChevronLeft} />{" "}
         </button>
