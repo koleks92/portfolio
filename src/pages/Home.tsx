@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import IntroAnimation from "../components/UI/IntroAnimation";
 import "../styles/aos.css";
 import { apps } from "../data/apps";
+import Footer from "../components/footer/Footer";
 
 function Home() {
   const [split, setSplit] = useState(false);
@@ -20,9 +21,8 @@ function Home() {
     <>
       <IntroAnimation split={split} onComplete={() => setSplit(true)} />
       <div
-        className={`min-h-screen flex flex-col transition-opacity duration-700 ${
-          split ? "opacity-100" : "opacity-0"
-        }`}
+        className={`min-h-screen flex flex-col transition-opacity duration-700 ${split ? "opacity-100" : "opacity-0"
+          }`}
       >
         <nav>
           <Header>Jan Sebastian Konieczek</Header>
@@ -40,7 +40,9 @@ function Home() {
               <AppSection data={app} />
             </div>
           ))}
-          <section id="footer">Footer</section>
+          <section id="footer">
+            <Footer />
+          </section>
         </main>
       </div>
     </>
