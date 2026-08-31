@@ -28,7 +28,10 @@ export default function Cloud() {
 
   return (
     <div className="my-30 mx-20">
-      <div id="yellow" className={show ? "show" : "hide"} />
+      <div className="sun_container">
+        <div className={`yellow ${show ? "show" : "hide"}`} />
+        <div className={`yellow glow ${show ? "show" : "hide"}`} />
+      </div>
       <div className="cloud" />
     </div>
   );

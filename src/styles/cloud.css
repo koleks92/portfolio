@@ -31,8 +31,14 @@
   left: 11vh;
 }
 
-#yellow {
+.sun_container {
   position: relative;
+  height: 10vh;
+  width: 10vh;
+}
+
+.yellow {
+  position: absolute;
   height: 10vh;
   width: 10vh;
   border-radius: 50%;
@@ -42,6 +48,10 @@
   z-index: 1;
 }
 
+.yellow.glow {
+  animation: sunGlow 2s infinite;
+}
+
 .hide {
   top: 6vh;
 }
@@ -49,7 +59,7 @@
 .show {
   top: 13vh;
   animation-name: pulse;
-  animation-duration: 8s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 
@@ -62,5 +72,16 @@
   }
   100% {
     background-color: rgb(255, 225, 0);
+  }
+}
+
+@keyframes sunGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
   }
 }
