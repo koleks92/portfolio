@@ -15,7 +15,7 @@ export default function CloudCombined() {
       const rain = document.querySelectorAll(".rain");
       console.log(rain);
 
-      const isHighPercent = percent >= 85;
+      const isHighPercent = percent >= 90;
       setShow(isHighPercent);
 
       rain.forEach((r) => {
