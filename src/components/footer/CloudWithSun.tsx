@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./../../styles/cloud.css";
 
-export default function CloudWithSun({ className }) {
+export default function Cloud() {
   const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function CloudWithSun({ className }) {
   }, [show]);
 
   return (
-    <div className={`my-30 mx-20 ${className}`}>
+    <div className="my-30 mx-20">
       <div className="sun_container">
         <div className={`yellow ${show ? "show" : "hide"}`} />
         <div className={`yellow glow ${show ? "show" : "hide"}`} />
