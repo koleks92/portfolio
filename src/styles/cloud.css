@@ -1,3 +1,9 @@
+.root {
+  margin: 20em auto;
+}
+
+/* Cloud */
+
 .cloud {
   position: relative;
   width: 30vh;
@@ -31,9 +37,13 @@
   left: 11vh;
 }
 
-/* CloudWithSun */
+.sunRainContainer {
+  position: absolute;
+}
 
-.sun_container {
+/* Sun */
+
+.sunContainer {
   position: relative;
   height: 10vh;
   width: 10vh;
@@ -70,10 +80,6 @@
   top: -1vh;
 }
 
-.things {
-  position: absolute;
-}
-
 @keyframes pulse {
   0% {
     background-color: rgb(255, 225, 0);
@@ -97,9 +103,9 @@
   }
 }
 
-/* CloudWithRain */
+/* Rain */
 
-.rain_container {
+.rainContainer {
   display: flex;
   position: relative;
   height: 5vh;
@@ -123,7 +129,7 @@
   transition: height 0.5s ease-in-out;
 }
 
-.rain_top {
+.rainTop {
   top: 30px;
 }
 

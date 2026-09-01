@@ -15,7 +15,7 @@ export default function CloudCombined() {
       const rain = document.querySelectorAll(".rain");
       console.log(rain);
 
-      const isHighPercent = percent >= 90;
+      const isHighPercent = percent >= 85;
       setShow(isHighPercent);
 
       rain.forEach((r) => {
@@ -34,24 +34,24 @@ export default function CloudCombined() {
   }, []);
 
   return (
-    <div className="my-50 mx-50">
-      <div className="things">
-        <div className={`sun_container`}>
+    <div className="root">
+      <div className="sunRainContainer">
+        <div className={`sunContainer`}>
           <div className={`yellow ${show ? "showSun" : "hideSun"}`} />
           <div className={`yellow glow ${show ? "showSun" : "hideSun"}`} />
         </div>
-        <div className={`rain_container `}>
-          <span className="rain rain_top" />
+        <div className={`rainContainer `}>
+          <span className="rain rainTop" />
           <span className="rain" />
-          <span className="rain rain_top" />
+          <span className="rain rainTop" />
           <span className="rain" />
-          <span className="rain rain_top" />
+          <span className="rain rainTop" />
           <span className="rain" />
-          <span className="rain rain_top" />
+          <span className="rain rainTop" />
           <span className="rain" />
-          <span className="rain rain_top" />
+          <span className="rain rainTop" />
           <span className="rain" />
-          <span className="rain rain_top" />
+          <span className="rain rainTop" />
           <span className="rain" />
         </div>
       </div>
