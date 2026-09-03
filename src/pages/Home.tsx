@@ -21,9 +21,8 @@ function Home() {
     <>
       <IntroAnimation split={split} onComplete={() => setSplit(true)} />
       <div
-        className={`min-h-screen flex flex-col transition-opacity duration-700 ${
-          split ? "opacity-100" : "opacity-0"
-        }`}
+        className={`min-h-screen flex flex-col transition-opacity duration-700 ${split ? "opacity-100" : "opacity-0"
+          }`}
       >
         <nav>
           <Header>Jan Sebastian Konieczek</Header>
@@ -41,6 +40,12 @@ function Home() {
               <AppSection data={app} />
             </div>
           ))}
+<<<<<<< HEAD
+=======
+          <section id="footer">
+            <Footer />
+          </section>
+>>>>>>> dev-footer
         </main>
         <footer>
           <Footer />

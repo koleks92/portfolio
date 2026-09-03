@@ -2,7 +2,10 @@ import picture from "../../assets/images/me/me3.png";
 
 import Typewriter from "typewriter-effect";
 import LightRays from "../UI/Rays";
+<<<<<<< HEAD
 import GalleryHero from "../gallery/GalleryHero";
+=======
+>>>>>>> dev-footer
 
 export default function Hero() {
   return (
@@ -42,8 +45,24 @@ export default function Hero() {
             />
           </span>
         </div>
+<<<<<<< HEAD
         <div className="flex flex-col justify-center items-center w-1/2 h-3/4">
           <GalleryHero />
+=======
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+>>>>>>> dev-footer
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
