@@ -112,37 +112,39 @@ export default function Gallery() {
   const iconSize: number = 44;
 
   return (
-    <div className="w-full overflow-hidden flex flex-col gap-6 py-4 fade-edges">
-      {/* First Row (Left to Right) */}
-      <InfiniteSlider gap={gap} speed={speed} className="overflow-visible">
-        {[...firstRow, ...firstRow].map((image, i) => (
-          <RenderIcon
-            key={`row1-${i}`}
-            image={image}
-            size={iconSize}
-            index={i}
-            rowId="row1"
-          />
-        ))}
-      </InfiniteSlider>
+    <div className="w-full overflow-hidden">
+      <div className="flex flex-col gap-6 py-4 fade-edges">
+        {/* First Row (Left to Right) */}
+        <InfiniteSlider gap={gap} speed={speed} className="overflow-visible">
+          {[...firstRow, ...firstRow].map((image, i) => (
+            <RenderIcon
+              key={`row1-${i}`}
+              image={image}
+              size={iconSize}
+              index={i}
+              rowId="row1"
+            />
+          ))}
+        </InfiniteSlider>
 
-      {/* Second Row (Right to Left) */}
-      <InfiniteSlider
-        gap={gap}
-        speed={speed}
-        reverse
-        className="overflow-visible"
-      >
-        {[...secondRow, ...secondRow].map((image, i) => (
-          <RenderIcon
-            key={`row2-${i}`}
-            image={image}
-            size={iconSize}
-            index={i}
-            rowId="row2"
-          />
-        ))}
-      </InfiniteSlider>
+        {/* Second Row (Right to Left) */}
+        <InfiniteSlider
+          gap={gap}
+          speed={speed}
+          reverse
+          className="overflow-visible"
+        >
+          {[...secondRow, ...secondRow].map((image, i) => (
+            <RenderIcon
+              key={`row2-${i}`}
+              image={image}
+              size={iconSize}
+              index={i}
+              rowId="row2"
+            />
+          ))}
+        </InfiniteSlider>
+      </div>
     </div>
   );
 }

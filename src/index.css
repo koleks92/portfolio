@@ -54,6 +54,7 @@ html {
 }
 
 .fade-edges {
+  isolation: isolate;
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -68,4 +69,8 @@ html {
     black 75%,
     transparent
   );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
