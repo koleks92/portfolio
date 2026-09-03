@@ -41,9 +41,6 @@ function Home() {
               <AppSection data={app} />
             </div>
           ))}
-          <section id="footer">
-            <Footer />
-          </section>
         </main>
         <footer>
           <Footer />
