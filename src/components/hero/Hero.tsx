@@ -1,12 +1,12 @@
 import picture from "../../assets/images/me/me3.png";
-
 import Typewriter from "typewriter-effect";
 import LightRays from "../UI/Rays";
 import GalleryHero from "../gallery/GalleryHero";
+import Page from "../UI/Page";
 
 export default function Hero() {
   return (
-    <div className="flex h-screen max-w-7xl mx-auto flex-col justify-evenly items-center bg-dark-mid text-text-muted gap-2">
+    <Page style="dark">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <LightRays
           raysOrigin="top-left"
@@ -60,6 +60,6 @@ export default function Hero() {
           <polyline points="6 9 12 15 18 9" />
         </svg>
       </div>
-    </div>
+    </Page>
   );
 }
