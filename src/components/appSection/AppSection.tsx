@@ -1,63 +1,51 @@
+import clsx from "clsx";
 import type { AppData } from "../../data/apps";
 import Page from "../UI/Page";
+import styles from "./AppSection.module.css";
 
 type AppProps = {
   data: AppData;
 };
 
 export default function AppSection({ data }: AppProps) {
+  const isDark = data.color === "dark";
+
+  console.log(isDark);
+
   return (
     <Page style={data.color}>
       {/* Title */}
-      <div className="flex flex-[1] min-h-0 justify-center items-center">
-        <h2 data-aos="zoom-in">{data.title}</h2>
+      <div className={clsx(styles.title, !isDark && styles.darkText)}>
+        <h1 data-aos="zoom-in">{data.title}</h1>
       </div>
 
       {/* Row 1 */}
-      <div className="flex flex-[3] min-h-0 flex-row p-10 pl-30 justify-evenly items-center">
+      <div className={styles.row1}>
         <div
-          className={`flex-1 min-w-0 p-5 m-5 rounded-lg ${
-            data.color === "dark"
-              ? "bg-light text-text-on-light"
-              : "bg-dark-mid text-text-muted"
+          className={`${styles.textBox1} ${
+            isDark ? styles.textOnLight : styles.textOnDark
           }`}
           data-aos="fade-right"
         >
-          <span className="text-lg">{data.description1}</span>
+          <span className={styles.text}>{data.description1}</span>
         </div>
-        <div
-          className="flex-1 min-w-0 h-full min-h-0 overflow-hidden"
-          data-aos="fade-left"
-        >
-          <img
-            src={data.image1}
-            alt={data.title}
-            className="w-full h-full object-contain scale-95 hover:scale-100 transition-transform duration-300"
-          />
+        <div className={styles.imageWrap} data-aos="fade-left">
+          <img src={data.image1} alt={data.title} className={styles.image} />
         </div>
       </div>
 
       {/* Row 2 */}
-      <div className="flex flex-[3] min-h-0 w-full flex-row p-10 pr-30 p-10 justify-evenly items-center">
-        <div
-          className="flex-1 min-w-0 h-full min-h-0 overflow-hidden"
-          data-aos="fade-right"
-        >
-          <img
-            src={data.image2}
-            alt={data.title}
-            className="w-full h-full object-contain scale-95 hover:scale-100 transition-transform duration-300"
-          />
+      <div className={styles.row2}>
+        <div className={styles.imageWrap} data-aos="fade-right">
+          <img src={data.image2} alt={data.title} className={styles.image} />
         </div>
         <div
-          className={`flex-1 min-w-0 p-5 rounded-xl ${
-            data.color === "dark"
-              ? "bg-light text-text-on-light"
-              : "bg-dark-mid text-text-muted"
+          className={`${styles.textBox2} ${
+            isDark ? styles.textOnLight : styles.textOnDark
           }`}
           data-aos="fade-left"
         >
-          <span className="text-lg">{data.description2}</span>
+          <span className={styles.text}>{data.description2}</span>
         </div>
       </div>
     </Page>
