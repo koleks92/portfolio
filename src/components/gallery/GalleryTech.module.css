@@ -1,0 +1,59 @@
+/* GalleryTech.module.css */
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.slider {
+  overflow: visible;
+}
+
+.iconCard {
+  flex-shrink: 0;
+  padding: 0.75rem;
+  background-color: rgba(245, 243, 255, 0.9); /* #f5f3ff/90 */
+  backdrop-filter: blur(4px);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: transform 300ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCard:hover {
+  transform: scale(1.1);
+}
+
+.fadeEdges {
+  isolation: isolate;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 25%,
+    black 75%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 25%,
+    black 75%,
+    transparent
+  );
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}

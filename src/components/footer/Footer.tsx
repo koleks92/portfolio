@@ -1,12 +1,13 @@
 import Page from "../UI/Page";
 import CloudCombined from "../clouds/CloudCombined";
-import Gallery from "../gallery/Gallery";
+import GalleryTech from "../gallery/GalleryTech";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
     <Page style="dark">
       <CloudCombined />
-      <h4 className="w-3/4 self-center text-center">
+      <h4 className={styles.thanks}>
         This <strong>site</strong> (and honestly, every project I've ever
         shipped) wouldn't exist without my <strong>family</strong> for the
         endless support, my <strong>Sana</strong> for putting up with "just one
@@ -18,11 +19,9 @@ export default function Footer() {
         lessons, and yeah — <strong>Claude AI</strong> too, for the rubber-duck
         sessions.
       </h4>
-      <div className="w-full m-2 flex-col items-center">
-        <h2 className="text-3xl font-bold text-center mt-6 mb-6 text-text-primary ">
-          Technologies & Tools
-        </h2>
-        <Gallery />
+      <div className={styles.techSection}>
+        <h2 className={styles.techTitle}>Technologies &amp; Tools</h2>
+        <GalleryTech />
       </div>
     </Page>
   );

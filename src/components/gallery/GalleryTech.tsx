@@ -1,5 +1,7 @@
 import React from "react";
+import clsx from "clsx";
 import { InfiniteSlider } from "../motion-primitives/infinite-slider";
+import styles from "./GalleryTech.module.css";
 
 import {
   AndroidOriginal,
@@ -95,14 +97,14 @@ const RenderIcon = ({ image, size, index, rowId }: RenderIconProps) => {
     <div
       key={`${rowId}-${index}`}
       title={image.name}
-      className="flex-shrink-0 p-3 bg-[#f5f3ff]/90 backdrop-blur-sm rounded-xl shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer flex items-center justify-center"
+      className={styles.iconCard}
     >
       <IconComponent size={size} />
     </div>
   );
 };
 
-export default function Gallery() {
+export default function GalleryTech() {
   const half = Math.ceil(techStack.length / 2);
   const firstRow = techStack.slice(0, half);
   const secondRow = techStack.slice(half);
@@ -112,10 +114,10 @@ export default function Gallery() {
   const iconSize: number = 44;
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className="flex flex-col gap-6 py-4 fade-edges">
+    <div className={styles.wrapper}>
+      <div className={clsx(styles.rows, styles.fadeEdges)}>
         {/* First Row (Left to Right) */}
-        <InfiniteSlider gap={gap} speed={speed} className="overflow-visible">
+        <InfiniteSlider gap={gap} speed={speed} className={styles.slider}>
           {[...firstRow, ...firstRow].map((image, i) => (
             <RenderIcon
               key={`row1-${i}`}
@@ -132,7 +134,7 @@ export default function Gallery() {
           gap={gap}
           speed={speed}
           reverse
-          className="overflow-visible"
+          className={styles.slider}
         >
           {[...secondRow, ...secondRow].map((image, i) => (
             <RenderIcon
