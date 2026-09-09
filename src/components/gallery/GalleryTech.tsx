@@ -117,7 +117,11 @@ export default function GalleryTech() {
     <div className={styles.wrapper}>
       <div className={clsx(styles.rows, styles.fadeEdges)}>
         {/* First Row (Left to Right) */}
-        <InfiniteSlider gap={gap} speed={speed} className={styles.slider}>
+        <InfiniteSlider
+          gap={gap}
+          speed={speed}
+          className={clsx(styles.slider, styles.fadeEdges)}
+        >
           {[...firstRow, ...firstRow].map((image, i) => (
             <RenderIcon
               key={`row1-${i}`}
@@ -134,7 +138,7 @@ export default function GalleryTech() {
           gap={gap}
           speed={speed}
           reverse
-          className={styles.slider}
+          className={clsx(styles.slider, styles.fadeEdges)}
         >
           {[...secondRow, ...secondRow].map((image, i) => (
             <RenderIcon
