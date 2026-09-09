@@ -7,13 +7,12 @@
 .rows {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  gap: 0.5rem;
 }
 
 .slider {
   overflow: visible;
+  padding: 0.5rem;
 }
 
 .iconCard {
