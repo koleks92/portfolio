@@ -1,0 +1,31 @@
+/* Header.module.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark);
+  padding: 0.5rem;
+  height: 3.75rem; /* h-15 */
+}
+
+.title {
+  color: var(--color-text-primary);
+}
+
+.dropdownWrap {
+  overflow: hidden;
+  transition: max-height 1000ms;
+  max-height: 0;
+}
+
+.dropdownOpen {
+  max-height: 10rem; /* max-h-40 */
+}

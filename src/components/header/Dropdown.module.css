@@ -1,0 +1,12 @@
+/* Dropdown.module.css */
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--color-dark-light);
+  padding: 0.5rem;
+}
+
+.link {
+  color: var(--color-text-muted);
+}
