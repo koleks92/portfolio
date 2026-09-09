@@ -4,6 +4,8 @@ import AOS from "aos";
 import AppSection from "../components/appSection/AppSection";
 import { useEffect, useState } from "react";
 import IntroAnimation from "../components/UI/IntroAnimation";
+import clsx from "clsx";
+import styles from "./Home.module.css";
 import "../styles/aos.css";
 import { apps } from "../data/apps";
 import Footer from "../components/footer/Footer";
@@ -20,23 +22,20 @@ function Home() {
   return (
     <>
       <IntroAnimation split={split} onComplete={() => setSplit(true)} />
-      <div
-        className={`min-h-screen flex flex-col transition-opacity duration-700 ${
-          split ? "opacity-100" : "opacity-0"
-        }`}
-      >
+      <div className={clsx(styles.page, split && styles.visible)}>
         <nav>
           <Header>Jan Sebastian Konieczek</Header>
         </nav>
-        <main className="flex-1">
-          <div id="hero" className="scroll-mt-15">
-            <Hero />
-          </div>
+        <main className={styles.main}>
+          <Hero />
           {apps.map((app) => (
             <div
               key={app.id}
               id={app.id}
-              className={`scroll-mt-15 w-full ${app.color === "dark" ? "bg-dark-mid" : "bg-light"}`}
+              className={clsx(
+                styles.appSection,
+                app.color === "dark" ? styles.dark : styles.light,
+              )}
             >
               <AppSection data={app} />
             </div>

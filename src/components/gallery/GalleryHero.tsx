@@ -4,11 +4,6 @@ import styles from "./GalleryHero.module.css";
 import avocadoro from "../../assets/images/apps/avocadoro/avocadoro2_wide.png";
 import dishdate from "../../assets/images/apps/dishdate/dishdate_wide.png";
 import beatit from "../../assets/images/apps/beatit/beatit_wide.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 type Description = {
   textOne: string;
@@ -68,53 +63,38 @@ export default function GalleryHero() {
     setVisibleIndex((prev) => (prev === apps.length - 1 ? 0 : prev + 1));
   };
 
-  const previousIndex = () => {
-    setVisibleIndex((prev) => (prev === 0 ? apps.length - 1 : prev - 1));
-  };
-
   return (
     <div className={styles.wrapper}>
-      <div className={styles.stage}>
-        {apps.map((item, index) => (
-          <>
-            <img
-              src={item.src}
-              alt={item.name}
-              key={index}
-              className={clsx(
-                styles.imageCustom,
-                index === visibleIndex ? styles.visible : styles.notVisible,
-              )}
-            />
-            <div
-              className={clsx(
-                styles.textCustom,
-                index === visibleIndex ? styles.visible : styles.notVisible,
-              )}
-            >
-              <h3 className={styles.title}>{item.name}</h3>
+      {apps.map((item, index) => (
+        <>
+          <img
+            src={item.src}
+            alt={item.name}
+            key={index}
+            className={clsx(
+              styles.imageCustom,
+              index === visibleIndex ? styles.visible : styles.notVisible,
+            )}
+          />
+          <div
+            className={clsx(
+              styles.textCustom,
+              index === visibleIndex ? styles.visible : styles.notVisible,
+            )}
+          >
+            <h3 className={styles.title}>{item.name}</h3>
 
-              {item.description.map((desc, descIndex) => {
-                return (
-                  <div className={styles.descRow} key={descIndex}>
-                    <span className={styles.descBold}>{desc.textOne}</span>
-                    <span>{desc.textTwo}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        ))}
-      </div>
-
-      <div className={styles.controls}>
-        <button onClick={() => previousIndex()} className={styles.navButton}>
-          <FontAwesomeIcon icon={faChevronLeft} />{" "}
-        </button>
-        <button onClick={() => nextIndex()} className={styles.navButton}>
-          <FontAwesomeIcon icon={faChevronRight} />{" "}
-        </button>
-      </div>
+            {item.description.map((desc, descIndex) => {
+              return (
+                <div className={styles.descRow} key={descIndex}>
+                  <span className={styles.descBold}>{desc.textOne}</span>
+                  <span>{desc.textTwo}</span>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ))}
     </div>
   );
 }

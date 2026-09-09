@@ -1,0 +1,33 @@
+/* Home.module.css */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 700ms;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.scrollSection {
+  scroll-margin-top: 3.75rem; /* scroll-mt-15 */
+}
+
+.appSection {
+  composes: scrollSection;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+}
+
+.dark {
+  background-color: var(--color-dark-mid);
+}
+
+.light {
+  background-color: var(--color-light);
+}
