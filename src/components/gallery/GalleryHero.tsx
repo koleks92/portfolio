@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import "../../styles/gallery.css";
+import clsx from "clsx";
+import styles from "./GalleryHero.module.css";
 import avocadoro from "../../assets/images/apps/avocadoro/avocadoro2_wide.png";
 import dishdate from "../../assets/images/apps/dishdate/dishdate_wide.png";
 import beatit from "../../assets/images/apps/beatit/beatit_wide.png";
@@ -72,28 +73,31 @@ export default function GalleryHero() {
   };
 
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center z-2 rounded-[4rem] bg-dark p-6">
-      <div className="flex justify-center items-center my-2 relative w-full h-full">
+    <div className={styles.wrapper}>
+      <div className={styles.stage}>
         {apps.map((item, index) => (
           <>
             <img
               src={item.src}
               alt={item.name}
               key={index}
-              className={`imageCustom ${index === visibleIndex ? "visible" : "notVisible"}`}
+              className={clsx(
+                styles.imageCustom,
+                index === visibleIndex ? styles.visible : styles.notVisible,
+              )}
             />
             <div
-              className={`textCustom ${index === visibleIndex ? "visible" : "notVisible"}`}
+              className={clsx(
+                styles.textCustom,
+                index === visibleIndex ? styles.visible : styles.notVisible,
+              )}
             >
-              <h3 className="text-center my-2">{item.name}</h3>
+              <h3 className={styles.title}>{item.name}</h3>
 
               {item.description.map((desc, descIndex) => {
                 return (
-                  <div
-                    className="flex flex-col text-center text-xl py-1"
-                    key={descIndex}
-                  >
-                    <span className="font-bold">{desc.textOne}</span>
+                  <div className={styles.descRow} key={descIndex}>
+                    <span className={styles.descBold}>{desc.textOne}</span>
                     <span>{desc.textTwo}</span>
                   </div>
                 );
@@ -103,11 +107,11 @@ export default function GalleryHero() {
         ))}
       </div>
 
-      <div className="flex w-full flex-1 justify-around mb-4">
-        <button onClick={() => previousIndex()} className="mx-4 text-3xl ">
+      <div className={styles.controls}>
+        <button onClick={() => previousIndex()} className={styles.navButton}>
           <FontAwesomeIcon icon={faChevronLeft} />{" "}
         </button>
-        <button onClick={() => nextIndex()} className="mx-4 text-3xl ">
+        <button onClick={() => nextIndex()} className={styles.navButton}>
           <FontAwesomeIcon icon={faChevronRight} />{" "}
         </button>
       </div>
