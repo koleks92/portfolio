@@ -9,6 +9,7 @@
   left: 0;
   padding: 0 2rem;
   color: var(--text);
+  background-color: var(--background);
 }
 
 .nav {
