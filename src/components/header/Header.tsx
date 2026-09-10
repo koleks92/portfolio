@@ -1,28 +1,19 @@
-import type React from "react";
-import clsx from "clsx";
-import Dropdown from "./Dropdown";
-import { useState } from "react";
 import styles from "./Header.module.css";
 
-type HeaderProps = {
-  children: React.ReactNode;
-};
-
-export default function Header({ children }: HeaderProps) {
-  const [open, setOpen] = useState(false);
-
+export default function Header() {
   return (
-    <div
-      className={styles.header}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
-      <div id="header" className={styles.bar}>
-        <h2 className={styles.title}>{children}</h2>
+    <header>
+      <div>
+        <span>&lt; Jan Sebastian Konieczek /&gt;</span>
       </div>
-      <div className={clsx(styles.dropdownWrap, open && styles.dropdownOpen)}>
-        <Dropdown />
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div>
+        <a href="mailto:konieczekjan@gmail.com">konieczekjan@gmail.com</a>
       </div>
-    </div>
+    </header>
   );
 }

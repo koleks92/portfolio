@@ -1,29 +1,58 @@
+/* Variables */
+
 :root {
-  --mono: "JetBrains Mono", monospace;
-  --color-dark: #13141a;
-  --color-dark-mid: #1e1f2b;
-  --color-dark-light: #252636;
-  --color-darker: #0d0e12;
-  --color-light: #f5f3ff;
+  --mono: "DM Mono", monospace;
+  --outfit: "Outfit", sans-serif;
 
-  --color-text-primary: #f0f0f8;
-  --color-text-muted: #eeedf8;
-  --color-text-soft: #d1d5db;
-  --color-text-on-light: #1e1f2b;
+  --background: #0c0c0c;
+  --text: #555555;
+  --text-muted: #888888;
+  --text-dark: #333333;
+  --white: #f0f0f0;
+  --yellow: #d4ff00;
+}
 
-  --color-accent: #a78bfa;
-  --color-accent-mid: #818cf8;
-  --color-accent-light: #c4b5fd;
-  --color-accent-dark: #7c3aed;
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #1e1f2b;
-  font-family: "JetBrains Mono", monospace;
+#wrapper {
+  background-color: var(--background);
+  font-family: var(--mono);
+  color: var(--text);
+}
+
+p {
+  font-family: var(--outfit);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--yellow);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mono);
 }
 
 h1 {

@@ -1,14 +1,10 @@
-import Header from "../components/header/Header";
-import Hero from "../components/hero/Hero";
 import AOS from "aos";
-import AppSection from "../components/appSection/AppSection";
 import { useEffect, useState } from "react";
 import IntroAnimation from "../components/UI/IntroAnimation";
 import clsx from "clsx";
 import styles from "./Home.module.css";
 import "../styles/aos.css";
-import { apps } from "../data/apps";
-import Footer from "../components/footer/Footer";
+import Header from "../components/Header/Header";
 
 function Home() {
   const [split, setSplit] = useState(false);
@@ -20,32 +16,12 @@ function Home() {
   }, [split]);
 
   return (
-    <>
+    <div id="wrapper">
       <IntroAnimation split={split} onComplete={() => setSplit(true)} />
       <div className={clsx(styles.page, split && styles.visible)}>
-        <nav>
-          <Header>Jan Sebastian Konieczek</Header>
-        </nav>
-        <main className={styles.main}>
-          <Hero />
-          {apps.map((app) => (
-            <div
-              key={app.id}
-              id={app.id}
-              className={clsx(
-                styles.appSection,
-                app.color === "dark" ? styles.dark : styles.light,
-              )}
-            >
-              <AppSection data={app} />
-            </div>
-          ))}
-        </main>
-        <footer>
-          <Footer />
-        </footer>
+        <Header />
       </div>
-    </>
+    </div>
   );
 }
 
