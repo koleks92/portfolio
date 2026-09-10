@@ -1,0 +1,15 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--background);
+  border: 1px solid blue;
+}
+
+.imageContainer {
+  flex: 3;
+}
+
+.descritionContainer {
+  flex: 2;
+}
