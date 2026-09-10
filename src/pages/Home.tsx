@@ -6,6 +6,7 @@ import styles from "./Home.module.css";
 import "../styles/aos.css";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
+import Projects from "../components/Projects/Projects";
 
 function Home() {
   const [split, setSplit] = useState(false);
@@ -25,6 +26,7 @@ function Home() {
         <Header />
         <main>
           <Hero />
+          <Projects />
         </main>
       </div>
     </div>
