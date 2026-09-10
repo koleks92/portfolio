@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { AppData } from "../../data/apps";
+import type { AppData } from "../../data/projectsData";
 import Page from "../UI/Page";
 import styles from "./AppSection.module.css";
 

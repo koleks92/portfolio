@@ -1,4 +1,3 @@
-import { apps } from "../../data/apps";
 import styles from "./Dropdown.module.css";
 
 export default function Dropdown() {
