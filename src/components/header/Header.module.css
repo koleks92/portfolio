@@ -17,3 +17,12 @@ nav {
   justify-content: space-evenly;
   font-size: 20px;
 }
+
+nav a {
+  color: var(--text-muted);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--yellow);
+}
