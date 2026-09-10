@@ -1,6 +1,6 @@
 import Page from "../UI/Page";
 import CloudCombined from "../clouds/CloudCombined";
-import GalleryTech from "../gallery/GalleryTech";
+import GalleryTech from "./GalleryTech";
 import styles from "./Footer.module.css";
 
 export default function Footer() {

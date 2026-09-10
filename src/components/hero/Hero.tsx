@@ -2,7 +2,7 @@ import picture from "../../assets/images/me/temp.png";
 // import picture from "../../assets/images/me/me3.png";
 import Typewriter from "typewriter-effect";
 import LightRays from "../UI/Rays";
-import GalleryHero from "../gallery/GalleryHero";
+import GalleryHero from "./GalleryHero";
 import Page from "../UI/Page";
 import styles from "./Hero.module.css";
 

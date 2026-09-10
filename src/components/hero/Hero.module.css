@@ -17,10 +17,13 @@
 
 .left {
   grid-column: 1;
-  display: flex;
+  display: grid;
+  grid-template-row: 6fr 4fr;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 0;
+  height: 100%;
   width: 100%;
 }
 
