@@ -5,6 +5,7 @@ import clsx from "clsx";
 import styles from "./Home.module.css";
 import "../styles/aos.css";
 import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
 
 function Home() {
   const [split, setSplit] = useState(false);
@@ -17,9 +18,14 @@ function Home() {
 
   return (
     <div id="wrapper">
+      {/* Animation */}
       <IntroAnimation split={split} onComplete={() => setSplit(true)} />
+      {/* Page */}
       <div className={clsx(styles.page, split && styles.visible)}>
         <Header />
+        <main>
+          <Hero />
+        </main>
       </div>
     </div>
   );

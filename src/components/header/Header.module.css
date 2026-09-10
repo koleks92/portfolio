@@ -1,4 +1,4 @@
-header {
+.header {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -11,18 +11,18 @@ header {
   color: var(--text);
 }
 
-nav {
+.nav {
   flex: 1;
   display: flex;
   justify-content: space-evenly;
   font-size: 20px;
 }
 
-nav a {
+.nav a {
   color: var(--text-muted);
   transition: color 0.2s ease-in-out;
 }
 
-a:hover {
+.nav a:hover {
   color: var(--yellow);
 }

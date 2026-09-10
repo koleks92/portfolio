@@ -1,0 +1,52 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.aboutContainer {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.typewriter {
+  display: flex;
+  margin: 0 auto;
+}
+
+.nameContainer {
+  width: 100%;
+  margin: 1rem 1.5rem 1rem;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 5rem;
+  line-height: 6rem;
+  font-weight: 500;
+}
+
+h1:last-child {
+  color: var(--yellow);
+}
+
+.aboutText {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8rem;
+}
+
+.imageContainer {
+  grid-column: 2;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}

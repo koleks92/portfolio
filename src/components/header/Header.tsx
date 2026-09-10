@@ -2,11 +2,11 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <div>
         <span>&lt; Jan Sebastian Konieczek /&gt;</span>
       </div>
-      <nav>
+      <nav className={styles.nav}>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
