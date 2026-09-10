@@ -6,7 +6,7 @@ import GalleryTech from "./GalleryTech";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section id="about" className={styles.hero}>
       <div className={styles.aboutContainer}>
         <p className={styles.typewriter}>
           <Typewriter
