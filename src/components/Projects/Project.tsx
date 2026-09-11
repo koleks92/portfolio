@@ -6,7 +6,7 @@ export default function Project(props: { projectData: ProjectType }) {
   return (
     <a className={styles.project} href={props.projectData.url}>
       <div className={styles.imageContainer}>
-        <img src={props.projectData.img} alt={props.projectData.title} />
+        <img className={styles.image} src={props.projectData.img} alt={props.projectData.title} />
       </div>
       <div className={styles.descriptionContainer}>
         <h3 className={styles.title}>
