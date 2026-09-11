@@ -1,0 +1,2 @@
+-Project, fix bottom div
+-Image zoom on hover
