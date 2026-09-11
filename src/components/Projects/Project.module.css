@@ -3,13 +3,58 @@
   flex-direction: column;
   width: 100%;
   background-color: var(--background);
-  border: 1px solid blue;
+  border-radius: 1px;
+}
+
+.project:hover {
+  background-color: var(--background-muted);
 }
 
 .imageContainer {
-  flex: 3;
+  flex: 2;
 }
 
-.descritionContainer {
-  flex: 2;
+img {
+}
+
+.descriptionContainer {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  color: var(--text);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleText {
+  color: var(--white);
+  transition: color 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.project:hover .titleText {
+  color: var(--yellow);
+}
+
+.description {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
+.tags {
+  display: flex;
+  justify-self: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+.tag {
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.4rem;
+  margin: 0 0.2rem;
+  font-size: 0.8rem;
 }

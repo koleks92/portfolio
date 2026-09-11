@@ -10,6 +10,7 @@
   padding: 0 2rem;
   color: var(--text);
   background-color: var(--background);
+  z-index: 1;
 }
 
 .nav {
