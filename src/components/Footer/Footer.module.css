@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.gratitudesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.gratitude {
+  padding: 1rem 2rem 1rem 0;
+}
+
+.gratitudeTitle {
+  color: var(--yellow);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.gratitudeText {
+  line-height: 1.5rem;
+}
+
+.cloudSeparator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

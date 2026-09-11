@@ -1,0 +1,145 @@
+.root {
+  margin: 0 auto;
+  padding: 7em 0em 0em 0em;
+}
+
+/* Cloud */
+
+.cloud {
+  position: relative;
+  width: 15vh;
+  height: 5vh;
+  background: #eceff1;
+  box-shadow: 0.4vh 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4vh;
+  z-index: 3;
+}
+
+.cloud::after,
+.cloud::before {
+  content: "";
+  position: inherit;
+  display: inline-block;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.cloud::after {
+  width: 4.25vh;
+  height: 4.25vh;
+  top: -4.5vh;
+  left: -5vh;
+}
+
+.cloud::before {
+  width: 7.5vh;
+  height: 7.5vh;
+  top: -3vh;
+  left: 5.5vh;
+}
+
+.sunRainContainer {
+  position: absolute;
+}
+
+/* Sun */
+
+.sunContainer {
+  position: relative;
+  height: 5vh;
+  width: 5vh;
+}
+
+.yellow {
+  position: absolute;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+  background-color: rgb(255, 225, 0);
+  left: 7.5vh;
+  transition:
+    top 2s ease-in-out,
+    left 2s ease-in-out;
+  z-index: 1;
+}
+
+.yellow.glow {
+  animation: sunGlow 2s infinite;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.showSun {
+  top: -4vh;
+  left: 2.5vh;
+  animation: pulse 4s infinite;
+}
+
+.hideSun {
+  top: -0.5vh;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgb(255, 225, 0);
+  }
+  50% {
+    background-color: rgb(255, 187, 0);
+  }
+  100% {
+    background-color: rgb(255, 225, 0);
+  }
+}
+
+@keyframes sunGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Rain */
+
+.rainContainer {
+  display: flex;
+  position: relative;
+  height: 2.5vh;
+  top: -10px;
+  animation: rainAnimation 0.3s infinite;
+}
+
+.hideRain {
+  height: 0vh !important;
+}
+
+.rain {
+  position: relative;
+  width: 0.2vh;
+  height: 1.5vh;
+  background: rgb(100, 180, 255);
+  border-radius: 0.5vh;
+  opacity: 0.9;
+  margin: 10px;
+  z-index: 5;
+  transition: height 0.5s ease-in-out;
+}
+
+.rainTop {
+  top: 30px;
+}
+
+@keyframes rainAnimation {
+  0% {
+  }
+  100% {
+    top: 100px;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
