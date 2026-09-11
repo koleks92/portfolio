@@ -1,6 +1,6 @@
 import styles from "./Hero.module.css";
 import Typewriter from "typewriter-effect";
-import me from "../../assets/images/me/me4.png";
+import me from "../../assets/images/me/me6.png";
 import ArrowUpRight from "../UI/ArrowUpRight";
 import GalleryTech from "./GalleryTech";
 
