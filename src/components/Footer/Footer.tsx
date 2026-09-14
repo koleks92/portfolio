@@ -1,4 +1,3 @@
-import ArrowUpRight from "../UI/ArrowUpRight";
 import CloudCombined from "./CloudCombined";
 import styles from "./Footer.module.css";
 
