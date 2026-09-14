@@ -25,8 +25,23 @@
   line-height: 1.5rem;
 }
 
-.cloudSeparator {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.lastContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  margin: 3rem 0 0;
+}
+
+.cloudContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 10rem;
+}
+
+.socialContainer {
+  flex: 1;
+  display: flex;
+  min-width: 400px;
+  min-height: 10rem;
 }

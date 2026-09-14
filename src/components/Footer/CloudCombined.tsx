@@ -4,7 +4,6 @@ import styles from "./Cloud.module.css";
 
 export default function CloudCombined() {
   const [show, setShow] = useState<boolean>(false);
-  const [hideRain, setHideRain] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,7 +12,7 @@ export default function CloudCombined() {
       const viewportHeight = window.innerHeight;
 
       const percent = (scrollY / (scrollHeight - viewportHeight)) * 100;
-      const isHighPercent = percent >= 100;
+      const isHighPercent = percent >= 95;
 
       setShow(isHighPercent);
     };
@@ -26,24 +25,17 @@ export default function CloudCombined() {
 
   return (
     <div className={styles.root}>
-      <div className={styles.sunRainContainer}>
-        <div className={styles.sunContainer}>
-          <div
-            className={clsx(
-              styles.yellow,
-              show ? styles.showSun : styles.hideSun,
-            )}
-          />
-          <div
-            className={clsx(
-              styles.yellow,
-              styles.glow,
-              show ? styles.showSun : styles.hideSun,
-            )}
-          />
-        </div>
-      </div>
       <div className={styles.cloud} />
+      <div
+        className={clsx(styles.yellow, show ? styles.showSun : styles.hideSun)}
+      />
+      <div
+        className={clsx(
+          styles.yellow,
+          styles.glow,
+          show ? styles.showSun : styles.hideSun,
+        )}
+      />
     </div>
   );
 }

@@ -31,11 +31,11 @@ export default function Footer() {
           </p>
         </div>
       </section>
-      <div className={styles.cloudSeparator}>
-        <CloudCombined />
-      </div>
-      <section className={styles.socialContainer}>
-
+      <section className={styles.lastContainer}>
+        <div className={styles.cloudContainer}>
+          <CloudCombined />
+        </div>
+        <div className={styles.socialContainer}></div>
       </section>
     </footer>
   );
