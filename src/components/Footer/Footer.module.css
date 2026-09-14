@@ -25,7 +25,7 @@
   line-height: 1.5rem;
 }
 
-.lastContainer {
+.extraContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
@@ -39,9 +39,30 @@
   min-height: 10rem;
 }
 
-.socialContainer {
-  flex: 1;
+.thanksContainer {
   display: flex;
-  min-width: 400px;
-  min-height: 10rem;
+  flex-direction: column;
+}
+
+.thanksTitle {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.thanksText {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.socialContainer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+.copyrights {
+  font-family: var(--mono);
+  color: var(--text-dark);
 }

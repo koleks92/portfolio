@@ -1,3 +1,4 @@
+import ArrowUpRight from "../UI/ArrowUpRight";
 import CloudCombined from "./CloudCombined";
 import styles from "./Footer.module.css";
 
@@ -31,12 +32,25 @@ export default function Footer() {
           </p>
         </div>
       </section>
-      <section className={styles.lastContainer}>
+      <section className={styles.extraContainer}>
         <div className={styles.cloudContainer}>
           <CloudCombined />
         </div>
-        <div className={styles.socialContainer}></div>
+        <div className={styles.thanksContainer}>
+          <h2 className={styles.thanksTitle}>THANKS FOR VISITING</h2>
+          <p className={styles.thanksText}>
+            Built with TypeScript, React, and Vite. Hosted on Vercel. Designed
+            in Figma Make.
+          </p>
+        </div>
       </section>
+      <div className={styles.socialContainer}>
+        <a href="https://www.github.com/koleks92">GitHub</a>
+        <a href="mailto:konieczekjan@gmail.com">Email</a>
+        <a href="https://dk.linkedin.com/in/jan-konieczek">LinkedIn</a>
+        <a href="https://codewars.com/users/koleks92">Codewars</a>
+        <p className={styles.copyrights}>© 2026 — Jan Sebastian Konieczek</p>
+      </div>
     </footer>
   );
 }
