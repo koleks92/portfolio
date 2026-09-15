@@ -55,7 +55,7 @@ export default function Hero() {
       <div className={styles.techContainer}>
         <h2>Tech & Tools</h2>
         <GalleryTech />
-        <div className={styles.scrollHint}>
+        <a href="#projects" className={styles.scrollHint}>
           <svg
             width="32"
             height="32"
@@ -68,7 +68,7 @@ export default function Hero() {
           >
             <polyline points="6 9 12 15 18 9" />
           </svg>
-        </div>
+        </a>
       </div>
     </section>
   );
