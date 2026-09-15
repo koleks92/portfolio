@@ -1,14 +1,14 @@
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-template-rows: 3fr auto 2fr;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   padding-top: 5rem;
 }
 
 .aboutContainer {
-  grid-column: 1;
-  grid-row: 1;
+  order: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -46,8 +46,7 @@ h1:last-child {
 }
 
 .imageContainer {
-  grid-column: 2;
-  grid-row: 1;
+  order: 2;
   display: flex;
   align-items: center;
   height: 100%;
@@ -62,8 +61,8 @@ img {
 }
 
 .socialContainer {
-  grid-column: span 2;
-  grid-row: 2;
+  order: 3;
+  grid-column: 1 / -1;
   display: flex;
   justify-content: space-evenly;
   border-top: 1px solid var(--border);
@@ -72,8 +71,8 @@ img {
 }
 
 .techContainer {
-  grid-column: span 2;
-  grid-row: 3;
+  order: 4;
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

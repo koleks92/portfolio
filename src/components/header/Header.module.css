@@ -28,3 +28,16 @@
 .nav a:hover {
   color: var(--yellow);
 }
+
+@media (max-width: 950px) {
+  .email,
+  .name {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 0.5rem;
+  }
+}
