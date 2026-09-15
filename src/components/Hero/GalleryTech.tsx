@@ -110,8 +110,8 @@ export default function GalleryTech() {
   const secondRow = techStack.slice(half);
 
   const speed: number = 12;
-  const gap: number = 32;
-  const iconSize: number = 44;
+  const gap: number = 24;
+  const iconSize: number = 32;
 
   return (
     <div className={styles.wrapper}>

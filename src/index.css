@@ -72,3 +72,17 @@ h2 {
   font-weight: 400;
   letter-spacing: 0.4rem;
 }
+
+@media (max-width: 900px) {
+  main,
+  footer {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  main,
+  footer {
+    padding: 0 0.5rem;
+  }
+}

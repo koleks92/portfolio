@@ -1,10 +1,9 @@
 .hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: 500px minmax(300px, 1fr);
   grid-template-rows: 3fr auto 2fr;
-  min-height: 100vh;
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 4rem;
 }
 
 .aboutContainer {
@@ -12,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
 }
 
 .typewriter {
@@ -23,12 +22,12 @@
 
 .nameContainer {
   width: 100%;
-  margin: 1rem 1.5rem 1rem;
+  margin: 1rem 0.5rem 1rem 1.5rem;
 }
 
 h1 {
   color: var(--white);
-  font-size: 5rem;
+  font-size: clamp(3.5rem, 5vw, 4.5rem);
   line-height: 6rem;
   font-weight: 500;
 }
@@ -40,7 +39,6 @@ h1:last-child {
 .aboutText {
   font-size: 1.4rem;
   font-weight: 300;
-  margin: 1rem;
   color: var(--text-muted);
   line-height: 1.8rem;
 }
@@ -64,10 +62,15 @@ img {
   order: 3;
   grid-column: 1 / -1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 1rem;
+}
+
+.socialContainer a {
+  margin: 0 0.5rem;
 }
 
 .techContainer {
@@ -82,6 +85,7 @@ img {
 }
 
 .scrollHint {
+  margin: 1rem 0 0;
   animation: bounce 1s infinite;
 }
 
@@ -94,5 +98,44 @@ img {
   50% {
     transform: translateY(0);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: minmax(250px, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .nameContainer {
+    margin: 1rem 0;
+  }
+
+  .aboutText {
+    margin: 1rem 0;
+  }
+
+  .imageContainer {
+    margin-top: 1rem;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 0 0.5rem;
+  }
+
+  h1 {
+    font-size: 13vw;
+    line-height: 15vw;
+  }
+
+  .typewriter {
+    font-size: 1.1rem;
+  }
+
+  .aboutText {
+    font-size: 1.2rem;
   }
 }
