@@ -23,9 +23,11 @@ export default function Hero() {
           />
         </p>
         <div className={styles.nameContainer}>
-          <h1>Jan</h1>
-          <h1>Sebastian</h1>
-          <h1>Konieczek</h1>
+          <div>
+            <h1>Jan</h1>
+            <h1>Sebastian</h1>
+            <h1>Konieczek</h1>
+          </div>
         </div>
         <p className={styles.aboutText}>
           Full-stack developer, Python enthusiast, Linux tinkerer, and
@@ -51,6 +53,7 @@ export default function Hero() {
         </a>
       </div>
       <div className={styles.techContainer}>
+        <h2>Tech & Tools</h2>
         <GalleryTech />
         <div className={styles.scrollHint}>
           <svg
