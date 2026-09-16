@@ -48,7 +48,7 @@ export default function Hero() {
         <a href="https://dk.linkedin.com/in/jan-konieczek" target="_blank">
           LinkedIn <ArrowUpRight />
         </a>
-        <a href="https://codewars.com/users/koleks92">
+        <a href="https://codewars.com/users/koleks92" target="_blank">
           Codewars <ArrowUpRight />
         </a>
       </div>
