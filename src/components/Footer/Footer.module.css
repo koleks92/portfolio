@@ -7,7 +7,7 @@
 
 .gratitudesContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -52,17 +52,41 @@
 .thanksText {
   font-size: 0.9rem;
   line-height: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .socialContainer {
-  display: flex;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   border-top: 1px solid var(--border);
   padding: 1rem 1rem;
   font-size: 0.9rem;
 }
 
+.socialLinks {
+  display: flex;
+  justify-content: space-around;
+}
+
 .copyrights {
+  justify-self: end;
   font-family: var(--mono);
   color: var(--text-dark);
+}
+
+@media (max-width: 700px) {
+  .gratitudesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .socialContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .copyrights {
+    justify-self: center;
+  }
 }

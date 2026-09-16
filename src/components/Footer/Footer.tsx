@@ -44,10 +44,12 @@ export default function Footer() {
         </div>
       </section>
       <div className={styles.socialContainer}>
-        <a href="https://www.github.com/koleks92">GitHub</a>
-        <a href="mailto:konieczekjan@gmail.com">Email</a>
-        <a href="https://dk.linkedin.com/in/jan-konieczek">LinkedIn</a>
-        <a href="https://codewars.com/users/koleks92">Codewars</a>
+        <div className={styles.socialLinks}>
+          <a href="https://www.github.com/koleks92">GitHub</a>
+          <a href="mailto:konieczekjan@gmail.com">Email</a>
+          <a href="https://dk.linkedin.com/in/jan-konieczek">LinkedIn</a>
+          <a href="https://codewars.com/users/koleks92">Codewars</a>
+        </div>
         <p className={styles.copyrights}>© 2026 — Jan Sebastian Konieczek</p>
       </div>
     </footer>
