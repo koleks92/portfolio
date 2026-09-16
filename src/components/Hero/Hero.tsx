@@ -39,13 +39,13 @@ export default function Hero() {
         <img src={me} alt="Jan Sebastian Konieczek" />
       </div>
       <div className={styles.socialContainer}>
-        <a href="https://www.github.com/koleks92">
+        <a href="https://www.github.com/koleks92" target="_blank">
           GitHub <ArrowUpRight />
         </a>
-        <a href="mailto:konieczekjan@gmail.com">
+        <a href="mailto:konieczekjan@gmail.com" target="_blank">
           Email <ArrowUpRight />
         </a>
-        <a href="https://dk.linkedin.com/in/jan-konieczek">
+        <a href="https://dk.linkedin.com/in/jan-konieczek" target="_blank">
           LinkedIn <ArrowUpRight />
         </a>
         <a href="https://codewars.com/users/koleks92">
